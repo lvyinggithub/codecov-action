@@ -28,5 +28,11 @@ jobs:
       - uses: codecov/codecov-action@v1
         with:
           #token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-
+          #files: ./coverage1.xml # optional
           verbose: true # optional (default = false)
+      - name: Upload coverage to Codecov (script)
+        uses: ./
+        with:
+          files: ./coverage/script/coverage-final.json
+          #flags: script
+          name: codecov-script
