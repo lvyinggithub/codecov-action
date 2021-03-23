@@ -30,6 +30,8 @@ jobs:
           #token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
           #files: ./coverage1.xml # optional
           verbose: true # optional (default = false)
+      - name: ls 
+        run: ls -l
       - name: Upload coverage to Codecov (script)
         uses: ./
         with:
